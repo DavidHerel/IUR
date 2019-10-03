@@ -26,6 +26,11 @@ namespace Cv2
             WeatherNet.ClientSettings.ApiKey = "1bdfdfbac52feb077781c6b5ccaa3b31";
             WeatherNet.ClientSettings.ApiUrl = "https://api.openweathermap.org/data/2.5/";
 
+            //2nd date
+            var today = DateTime.Now;
+            var secondDay = today.AddDays(2);
+            OtherTabItem.Header = secondDay.DayOfWeek.ToString() + " " + secondDay.ToShortDateString();
+
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -49,10 +54,21 @@ namespace Cv2
             {
                 var content = ((sender as ComboBox).SelectedItem as ComboBoxItem).Content;
                 var result = WeatherNet.Clients.CurrentWeather.GetByCityName(content.ToString(), "Czechia", "en", "metric");
+                var resultTommorow = WeatherNet.Clients.FiveDaysForecast.GetByCityName(content.ToString(), "Czechia", "en", "metric"); //CurrentWeather.GetByCityName(content.ToString(), "Czechia", "en", "metric");
                 if (result.Success)
                 {
-                    TemperatureTextBlock.Text = result.Item.Temp.ToString();
-                    HumidityTextBlock.Text = result.Item.Humidity.ToString();
+
+                    //Today
+                    TemperatureTextBlock.Text = result.Item.Temp.ToString() + " °C";
+                    HumidityTextBlock.Text = result.Item.Humidity.ToString() + " %";
+
+                    //Tommorow
+                    TommorowTemperatureTextBlock.Text = resultTommorow.Items[0].Temp.ToString() + " °C";
+                    TommorowHumidityTextBlock.Text = resultTommorow.Items[0].Humidity.ToString() + " %";
+
+                    //Other day
+                    OtherTemperatureTextBlock.Text = resultTommorow.Items[1].Temp.ToString() + " °C";
+                    OtherHumidityTextBlock.Text = resultTommorow.Items[1].Humidity.ToString() + " %";
                 }
             }
         }

@@ -5,17 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cv2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="350 ">
+        Title="CurrentWeather" Height="244.4" Width="350 ">
     <Grid>
-        <Label Content="Město" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Teplota" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
-        <Label Content="Vlhkost" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="70,14,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
-            <ComboBoxItem Content="Praha" IsSelected="True"/>
+        <Label Content="Místo" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top"/>
+        <ComboBox HorizontalAlignment="Left" Margin="70,14,0,0" VerticalAlignment="Top" Width="80" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="Praha"/>
             <ComboBoxItem Content="Brno"/>
             <ComboBoxItem Content="Ostrava"/>
         </ComboBox>
-        <TextBlock Name= "TemperatureTextBlock" HorizontalAlignment="Left" Margin="70,46,0,0" TextWrapping="Wrap" Text="Teplota" VerticalAlignment="Top"/>
-        <TextBlock Name="HumidityTextBlock" HorizontalAlignment="Left" Margin="70,77,0,0" TextWrapping="Wrap" Text="Vlhkost" VerticalAlignment="Top"/>
+
+        <TabControl Margin="10,46,10,76">
+            <TabItem Header="Current">
+                <Grid>
+                    <Label Content="Teplota" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.125,-0.375"/>
+                    <Label Content="Vlhkost" HorizontalAlignment="Left" Margin="0,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.125,-0.375"/>
+                    <TextBlock x:Name="TemperatureTextBlock" HorizontalAlignment="Left" Margin="53,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Vyber m"/><Run Text="í"/><Run Text="sto"/><LineBreak/><Run Text=""/></TextBlock>
+                    <TextBlock x:Name="HumidityTextBlock" HorizontalAlignment="Left" Margin="53,35,0,-1.4" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Vyber m"/><Run Text="í"/><Run Text="sto"/><LineBreak/><Run Text=""/></TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Tommorow">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="149*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Teplota" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.125,-0.375" Grid.ColumnSpan="2"/>
+                    <Label Content="Vlhkost" HorizontalAlignment="Left" Margin="0,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.125,-0.375" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="TommorowTemperatureTextBlock" HorizontalAlignment="Left" Margin="33,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"><Run Text="Vyber m"/><Run Text="í"/><Run Text="sto"/><LineBreak/><Run Text=""/></TextBlock>
+                    <TextBlock x:Name="TommorowHumidityTextBlock" HorizontalAlignment="Left" Margin="33,35,0,-1.4" TextWrapping="Wrap" VerticalAlignment="Top" Grid.Column="1"><Run Text="Vyber m"/><Run Text="í"/><Run Text="sto"/><LineBreak/><Run Text=""/></TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem Name="OtherTabItem" Header="Thursday...">
+                <Grid>
+                    <Label Content="Teplota" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.125,-0.375"/>
+                    <Label Content="Vlhkost" HorizontalAlignment="Left" Margin="0,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.125,-0.375"/>
+                    <TextBlock x:Name="OtherTemperatureTextBlock" HorizontalAlignment="Left" Margin="53,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Vyber m"/><Run Text="í"/><Run Text="sto"/><LineBreak/><Run Text=""/></TextBlock>
+                    <TextBlock x:Name="OtherHumidityTextBlock" HorizontalAlignment="Left" Margin="53,35,0,-1.4" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Vyber m"/><Run Text="í"/><Run Text="sto"/><LineBreak/><Run Text=""/></TextBlock>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
