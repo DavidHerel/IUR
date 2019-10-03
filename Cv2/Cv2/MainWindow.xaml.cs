@@ -52,7 +52,7 @@ namespace Cv2
         {
             if (this.IsInitialized)
             {
-                var content = ((sender as ComboBox).SelectedItem as ComboBoxItem).Content;
+                var content = allCities.SelectedItem;//((sender as ComboBox).SelectedItem as ComboBoxItem).Content;
                 var result = WeatherNet.Clients.CurrentWeather.GetByCityName(content.ToString(), "Czechia", "en", "metric");
                 var resultTommorow = WeatherNet.Clients.FiveDaysForecast.GetByCityName(content.ToString(), "Czechia", "en", "metric"); //CurrentWeather.GetByCityName(content.ToString(), "Czechia", "en", "metric");
                 if (result.Success)
@@ -69,6 +69,18 @@ namespace Cv2
                     //Other day
                     OtherTemperatureTextBlock.Text = resultTommorow.Items[1].Temp.ToString() + " °C";
                     OtherHumidityTextBlock.Text = resultTommorow.Items[1].Humidity.ToString() + " %";
+                }
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            //add new window
+            var manageCitiesWindow = new ManageCities();
+            if (manageCitiesWindow.ShowDialog() == true)
+            {
+                foreach (var temp in manageCitiesWindow.cities.Items) { 
+                    allCities.Items.Add(temp);
                 }
             }
         }

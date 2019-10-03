@@ -8,10 +8,7 @@
         Title="CurrentWeather" Height="244.4" Width="350 ">
     <Grid>
         <Label Content="Místo" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top"/>
-        <ComboBox HorizontalAlignment="Left" Margin="70,14,0,0" VerticalAlignment="Top" Width="80" SelectionChanged="ComboBox_SelectionChanged">
-            <ComboBoxItem Content="Praha"/>
-            <ComboBoxItem Content="Brno"/>
-            <ComboBoxItem Content="Ostrava"/>
+        <ComboBox Name="allCities" HorizontalAlignment="Left" Margin="70,17,0,0" VerticalAlignment="Top" Width="80" SelectionChanged="ComboBox_SelectionChanged" Height="19">
         </ComboBox>
 
         <TabControl Margin="10,46,10,76">
@@ -44,5 +41,6 @@
                 </Grid>
             </TabItem>
         </TabControl>
+        <Button Content="Manage Cities" HorizontalAlignment="Left" Margin="164,17,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click_1"/>
     </Grid>
 </Window>

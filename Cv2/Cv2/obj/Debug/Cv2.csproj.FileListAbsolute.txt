@@ -33,3 +33,7 @@ D:\Skola\IUR\IUR\Cv2\Cv2\obj\Debug\Cv2.csproj.GenerateResource.cache
 D:\Skola\IUR\IUR\Cv2\Cv2\obj\Debug\Cv2.csproj.CopyComplete
 D:\Skola\IUR\IUR\Cv2\Cv2\obj\Debug\Cv2.exe
 D:\Skola\IUR\IUR\Cv2\Cv2\obj\Debug\Cv2.pdb
+D:\Skola\IUR\IUR\Cv2\Cv2\obj\Debug\AddCity.g.cs
+D:\Skola\IUR\IUR\Cv2\Cv2\obj\Debug\ManageCities.g.cs
+D:\Skola\IUR\IUR\Cv2\Cv2\obj\Debug\AddCity.baml
+D:\Skola\IUR\IUR\Cv2\Cv2\obj\Debug\ManageCities.baml
