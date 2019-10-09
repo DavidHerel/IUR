@@ -42,11 +42,11 @@ namespace MVP_Example
         {
             if (ModelUpdated != null)
             {
-                if (language.Contains("cz"))
+                if (language.ToLower().Contains("cz"))
                 {
                     _language = "cz";
                 }
-                else if (language.Contains("en"))
+                else if (language.ToLower().Contains("en"))
                 {
                     _language = "en";
                 }
@@ -58,11 +58,11 @@ namespace MVP_Example
         {
             if (ModelUpdated != null)
             {
-                if (unit.Contains("C"))
+                if (unit.ToLower().Contains("c"))
                 {
                     _unit = "°C";
                 }
-                else if (unit.Contains("F"))
+                else if (unit.ToLower().Contains("f"))
                 {
                     _unit = " F";
                 }

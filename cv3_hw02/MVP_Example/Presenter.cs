@@ -22,14 +22,14 @@ namespace MVP_Example
 
         internal void ParseCommand(string command)
         {
-            if (command == "x")
+            if (command.ToLower() == "x")
             {
                 Environment.Exit(0);
             } 
-            else if (command.Contains("setLanguage")){
+            else if (command.ToLower().Contains("setlanguage")){
                 _model.setLanguage(command);
             }
-            else if (command.Contains("setUnit"))
+            else if (command.ToLower().Contains("setunit"))
             {
                 _model.setUnit(command);
             }
@@ -47,10 +47,19 @@ namespace MVP_Example
         {
             _view.City = weatherData.City;
             _view.Country = weatherData.Country;
-            _view.Temp = weatherData.Temp;
-            _view.TempMax = weatherData.TempMax;
-            _view.TempMin = weatherData.TempMin;
             _view.Humidity = weatherData.Humidity;
+            if (unit == " F")
+            {
+                _view.Temp = (weatherData.Temp * 9) / 5 + 32;
+                _view.TempMax = (weatherData.TempMax * 9) / 5 + 32;
+                _view.TempMin = (weatherData.TempMin * 9) / 5 + 32;
+            }
+            else
+            {
+                _view.Temp = weatherData.Temp;
+                _view.TempMax = weatherData.TempMax;
+                _view.TempMin = weatherData.TempMin;
+            }
 
             _view.Language = language;
             _view.Unit = unit;
