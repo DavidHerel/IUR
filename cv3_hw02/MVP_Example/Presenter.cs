@@ -4,7 +4,7 @@ using WeatherConnectorLib;
 namespace MVP_Example
 {
 
-    /**  passive view
+    /**  Passive view
      * 
      **/
     internal class Presenter
