@@ -1,0 +1,12 @@
+C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\bin\Debug\MVC_Example.exe.config
+C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\bin\Debug\MVC_Example.exe
+C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\bin\Debug\MVC_Example.pdb
+C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\bin\Debug\WeatherConnector.dll
+C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\bin\Debug\WeatherNet.dll
+C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\bin\Debug\Newtonsoft.Json.dll
+C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\bin\Debug\WeatherConnector.dll.config
+C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\obj\Debug\MVC_Example.csprojAssemblyReference.cache
+C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\obj\Debug\MVC_Example.csproj.CoreCompileInputs.cache
+C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\obj\Debug\MVC_Example.csproj.CopyComplete
+C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\obj\Debug\MVC_Example.exe
+C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\obj\Debug\MVC_Example.pdb
