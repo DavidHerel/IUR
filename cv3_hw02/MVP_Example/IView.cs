@@ -8,7 +8,11 @@
         double TempMax { set; }
         double TempMin { set; }
         double Humidity { set; }
-        
+        //Celsia or fahrenheit
+        string Unit { set;  }
+        //Cz or en
+        string Language { set; }
+
         void Render();
     }
 }

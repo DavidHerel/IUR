@@ -14,8 +14,12 @@ namespace MVP_Example
             IView view = new ConsoleView();
             Presenter presenter = new Presenter(model, view);
             while (true)
-            {
-                Console.Write("Command for presenter (x to exit): ");
+            {                
+                string output = string.Format("Default language is English. Default unit is Celsia. {0}", Environment.NewLine);
+                output += string.Format("To change language on CZ enter: setLanguage cz . To EN enter: setLanguage en {0}", Environment.NewLine);
+                output += string.Format("To change unit on Fahrenheit enter: setUnit F . To Celsia enter: setUnit C {0}", Environment.NewLine);
+                output += string.Format("Command for presenter (x to exit): ");
+                Console.Write(output);
                 string command = Console.ReadLine();
                 presenter.ParseCommand(command);
             }

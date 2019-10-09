@@ -25,6 +25,13 @@ namespace MVP_Example
             if (command == "x")
             {
                 Environment.Exit(0);
+            } 
+            else if (command.Contains("setLanguage")){
+                _model.setLanguage(command);
+            }
+            else if (command.Contains("setUnit"))
+            {
+                _model.setUnit(command);
             }
             else
             {
@@ -36,7 +43,7 @@ namespace MVP_Example
         }
 
         //update GUI when model is changed
-        private void ModelUpdated(WeatherData weatherData)
+        private void ModelUpdated(WeatherData weatherData, string language, string unit)
         {
             _view.City = weatherData.City;
             _view.Country = weatherData.Country;
@@ -44,6 +51,9 @@ namespace MVP_Example
             _view.TempMax = weatherData.TempMax;
             _view.TempMin = weatherData.TempMin;
             _view.Humidity = weatherData.Humidity;
+
+            _view.Language = language;
+            _view.Unit = unit;
 
             _view.Render();
         }
