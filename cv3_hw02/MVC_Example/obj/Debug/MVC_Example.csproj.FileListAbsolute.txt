@@ -10,3 +10,6 @@ C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\obj\Debug\MVC_Exampl
 C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\obj\Debug\MVC_Example.csproj.CopyComplete
 C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\obj\Debug\MVC_Example.exe
 C:\Users\hereldav\source\repos\IUR-p03_template\MVC_Example\obj\Debug\MVC_Example.pdb
+D:\IUR\IUR\cv3_hw02\MVC_Example\obj\Debug\MVC_Example.csprojAssemblyReference.cache
+D:\IUR\IUR\cv3_hw02\MVC_Example\obj\Debug\MVC_Example.exe
+D:\IUR\IUR\cv3_hw02\MVC_Example\obj\Debug\MVC_Example.pdb
