@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:IUR_p04"
         mc:Ignorable="d"
         Title="Správce alarmů" Height="254" Width="420.567" SizeToContent="WidthAndHeight">
-        <Window.Resources>
-            <local:ToUpperConverter x:Key="ToUpperConverter" />
-        </Window.Resources>
+    <Window.Resources>
+        <local:ToUpperConverter x:Key="ToUpperConverter" />
+    </Window.Resources>
     <DockPanel>
         <Grid DockPanel.Dock="Left" Margin="5">
             <Grid.ColumnDefinitions>
@@ -19,11 +19,11 @@
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
             <ListBox Grid.Row="0" ItemsSource="{Binding AlarmList}">
-                <ListBoxItem>Velká zima</ListBoxItem>
-                <ListBoxItem>Velké teplo</ListBoxItem>
+                <!--<ListBoxItem>Velká zima</ListBoxItem>
+                <ListBoxItem>Velké teplo</ListBoxItem>-->
             </ListBox>
             <StackPanel Orientation="Horizontal" Grid.Row="1">
-                <Button Margin="5" Content="Nový" />
+                <Button Margin="5" Content="Nový" Click="Button_Click"/>
                 <Button Margin="5" Content="Smazat" />
             </StackPanel>
         </Grid>
@@ -42,10 +42,9 @@
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
-                
+
                 <Label Grid.Row="0" Grid.Column="0" Margin="0, 2, 0, 0">Název alarmu:</Label>
-                <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="5, 0" VerticalAlignment="Center" 
-                         Text="{Binding AlarmName, Converter={StaticResource ToUpperConverter}}"/>
+                <TextBox Grid.Row="0" Grid.ColumnSpan="3" Margin="81,5,14,5" VerticalAlignment="Center" Text="{Binding AlarmName, Converter={StaticResource ToUpperConverter}}"/>
 
                 <Label Grid.Row="1" Grid.Column="0" Margin="0, 2, 0, 0">Typ alarmu:</Label>
                 <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
@@ -53,16 +52,15 @@
                     <RadioButton VerticalContentAlignment="Center" Margin="10, 5">Max. teplota</RadioButton>
                 </StackPanel>
                 <Label Grid.Row="2" Grid.Column="0" Margin="0, 2, 0, 0">Hranice:</Label>
-                <Slider Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Minimum="-30" Maximum="50" x:Name="borderSlider">
-                </Slider>
-                <TextBox Grid.Row="2" Grid.Column="2" Width="40" Margin="5, 0" VerticalAlignment="Center" x:Name="borderTexbox"
-                         Text="{Binding ElementName=borderSlider, Path=Value}">
-                </TextBox>
+                <Slider x:Name="mySlider" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Minimum="-30" Maximum="50"/>
+                <TextBox x:Name="myTextBox" Grid.Row="2" Grid.Column="2" Width="40" Margin="5, 0" VerticalAlignment="Center" 
+                         Text="{Binding ElementName=mySlider, Path=Value, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, TargetNullValue=0, FallbackValue=0}"></TextBox>
 
                 <Label Grid.Row="3" Grid.Column="0" Margin="0, 2, 0, 0">Obrázek:</Label>
-                <ComboBox Name="ComboBox_Images" Grid.Row="3" Grid.Column="1" Margin="5" VerticalAlignment="Top" SelectionChanged="ComboBox_SelectionChanged" >
-                    <Image Source="Images/cold1.png" Height="30"></Image>
-                    <Image Source="Images/cold2.png" Height="30"></Image>
+                <ComboBox x:Name="ComboBox_Images" Grid.Row="3" Grid.Column="1" Margin="5" VerticalAlignment="Top">
+                    <Image Height="30" Source="Images/hot3.png"></Image>
+                    <Image Height="30" Source="Images/hot2.png"></Image>
+                    <Image Height="30" Source="Images/hot1.png"></Image>
                 </ComboBox>
                 <Border BorderBrush="Black" BorderThickness="1" Grid.Row="3" Grid.Column="2" Width="50" Height="50" Margin="10, 5, 10, 6" VerticalAlignment="Top">
                     <Image />
@@ -70,7 +68,7 @@
 
                 <Label Grid.Row="4" Grid.Column="0" Margin="0, 2, 0, 0">Zpráva:</Label>
                 <TextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="5, 0" VerticalAlignment="Center"></TextBox>
-                
+
                 <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" Margin="5" HorizontalAlignment="Right">
                     <Button Margin="5">Uložit</Button>
                     <Button Margin="5">Storno

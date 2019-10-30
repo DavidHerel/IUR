@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,45 +12,39 @@ namespace IUR_p04
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
     public partial class AlarmManager : Window
     {
+        public ObservableCollection<string> AlarmList { get; set; }
+        public string AlarmName { get; set; } // autoproperty, kompilator vygeneruje neco co existuje na pozadi
 
         public AlarmManager()
         {
             InitializeComponent();
             DataContext = this;
+            AlarmName = "My tempreature alarm";
 
-            Image image = new Image();
-            image.Source = new BitmapImage(new System.Uri("pack://application:,,,/Images/hot1.png"));
-            image.Height = 30;
-            ComboBox_Images.Items.Add(image);
+            AlarmList = new ObservableCollection<string>();
 
-            Image image2 = new Image();
-            image2.Source = new BitmapImage(new System.Uri("pack://application:,,,/Images/hot2.png"));
-            image2.Height = 30;
-            ComboBox_Images.Items.Add(image2);
+            Image image1 = new Image();
+            image1.Source = new BitmapImage(new System.Uri("pack://application:,,,/Images/cold1.png")); //reference na assemble, kam se to sbilduje, tri ','jsou excapovaci znaky, ktere se zmeni na lomitka.
+            image1.Height = 30;
+            ComboBox_Images.Items.Add(image1);
 
-            /*
-            Binding binding = new Binding();
-            // Set source object
-            binding.Source = borderSlider;
-            // Set source property
-            binding.Path = new PropertyPath("Value");
-            // Attach to target property
-            borderTexbox.SetBinding(TextBox.TextProperty, binding);
-            */
-
-            AlarmName = "My morning Alarm";
+            //Binding binding = new Binding();
+            //binding.Source = mySlider;
+            //binding.Path = new PropertyPath("Value"); //mySlider.Value
+            //myTextBox.SetBinding(TextBox.TextProperty, binding);
+           
         }
 
-        public string AlarmName { get; set; }
-
-        private void ComboBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            AlarmList.Add("New Alarm");
         }
-       
     }
+
 
     public class ToUpperConverter : IValueConverter
     {

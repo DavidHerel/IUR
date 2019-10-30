@@ -1,0 +1,14 @@
+D:\IUR\IUR\IUR-task4-template\obj\Debug\IUR-p04.csprojAssemblyReference.cache
+D:\IUR\IUR\IUR-task4-template\obj\Debug\UserProfile.g.cs
+D:\IUR\IUR\IUR-task4-template\obj\Debug\App.g.cs
+D:\IUR\IUR\IUR-task4-template\obj\Debug\IUR-p04_MarkupCompile.cache
+D:\IUR\IUR\IUR-task4-template\obj\Debug\IUR-p04_MarkupCompile.lref
+D:\IUR\IUR\IUR-task4-template\bin\Debug\IUR-p04.exe.config
+D:\IUR\IUR\IUR-task4-template\bin\Debug\IUR-p04.exe
+D:\IUR\IUR\IUR-task4-template\bin\Debug\IUR-p04.pdb
+D:\IUR\IUR\IUR-task4-template\obj\Debug\UserProfile.baml
+D:\IUR\IUR\IUR-task4-template\obj\Debug\IUR-p04.g.resources
+D:\IUR\IUR\IUR-task4-template\obj\Debug\IUR_p04.Properties.Resources.resources
+D:\IUR\IUR\IUR-task4-template\obj\Debug\IUR-p04.csproj.GenerateResource.cache
+D:\IUR\IUR\IUR-task4-template\obj\Debug\IUR-p04.exe
+D:\IUR\IUR\IUR-task4-template\obj\Debug\IUR-p04.pdb
