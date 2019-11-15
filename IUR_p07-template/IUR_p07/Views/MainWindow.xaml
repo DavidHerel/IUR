@@ -1,0 +1,61 @@
+﻿<Window x:Class="IUR_p07.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IUR_p07"
+        xmlns:weather="clr-namespace:WeatherInfoCustomControl;assembly=MyCustomControl"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        mc:Ignorable="d"
+        Title="Document previewer" Height="450" Width="800">
+
+    <Window.Resources>
+
+    </Window.Resources>
+    <Window.DataContext>
+        <local:MainViewModel />
+    </Window.DataContext>
+    <DockPanel>
+        <!--<local:myinputcontrol margin="10" filename="{binding filepath, mode=twoway}" filenamechanged="myinputcontrol_filenamechanged" dockpanel.dock="top"></local:myinputcontrol>-->
+        <local:MyInputControl Margin="10" FileName="{Binding Filepath, Mode=TwoWay}" DockPanel.Dock="top"></local:MyInputControl>
+        <DockPanel DockPanel.Dock="Left" Margin="10, 0, 10, 10">
+            <Label DockPanel.Dock="Top">Recent files</Label>
+            <Button  DockPanel.Dock="Bottom" Command="{Binding OkCommand}" Margin="10, 10" Width="50" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <StackPanel>
+                    <Image Source="/Images/preview.png" Width="32" VerticalAlignment="Bottom" />
+                    <TextBlock TextAlignment="Center" Padding="4,2">Preview</TextBlock>
+                </StackPanel>
+            </Button>
+            <ListBox ItemsSource="{Binding RecentFiles}" SelectedItem="{Binding SelectedRecentFile}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseDoubleClick">
+                        <ei:CallMethodAction TargetObject="{Binding}" MethodName="SetRecentAsCurrent" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Path=Path}" TextWrapping="NoWrap"/>
+                            <TextBlock Text="{Binding Path=FileType}" TextWrapping="NoWrap"/>
+                            <TextBlock Text="{Binding Path=PreviewText}" TextWrapping="NoWrap"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel MaxWidth="300"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+
+            </ListBox>
+        </DockPanel>
+        
+        <DockPanel>
+            <Label DockPanel.Dock="Top">Weather widgets</Label>
+            <WrapPanel>
+                <weather:WeatherInfo City="Prague" Temperature="13" Humidity="22" Label="Mist" Width="200" />
+            </WrapPanel>
+        </DockPanel>
+    </DockPanel>
+</Window>

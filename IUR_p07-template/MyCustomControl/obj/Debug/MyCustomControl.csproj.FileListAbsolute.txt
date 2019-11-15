@@ -1,0 +1,13 @@
+c:\Users\malyi1\Developer\skola-iur\IUR_p07-user_control\MyCustomControl\bin\Debug\MyCustomControl.dll
+c:\Users\malyi1\Developer\skola-iur\IUR_p07-user_control\MyCustomControl\bin\Debug\MyCustomControl.pdb
+c:\Users\malyi1\Developer\skola-iur\IUR_p07-user_control\MyCustomControl\obj\Debug\GeneratedInternalTypeHelper.g.cs
+c:\Users\malyi1\Developer\skola-iur\IUR_p07-user_control\MyCustomControl\obj\Debug\MyCustomControl_MarkupCompile.cache
+c:\Users\malyi1\Developer\skola-iur\IUR_p07-user_control\MyCustomControl\obj\Debug\MyCustomControl_MarkupCompile.lref
+c:\Users\malyi1\Developer\skola-iur\IUR_p07-user_control\MyCustomControl\obj\Debug\Themes\Generic.baml
+c:\Users\malyi1\Developer\skola-iur\IUR_p07-user_control\MyCustomControl\obj\Debug\MyCustomControl.g.resources
+c:\Users\malyi1\Developer\skola-iur\IUR_p07-user_control\MyCustomControl\obj\Debug\MyCustomControl.Properties.Resources.resources
+c:\Users\malyi1\Developer\skola-iur\IUR_p07-user_control\MyCustomControl\obj\Debug\MyCustomControl.csproj.GenerateResource.cache
+c:\Users\malyi1\Developer\skola-iur\IUR_p07-user_control\MyCustomControl\obj\Debug\MyCustomControl.csproj.CoreCompileInputs.cache
+c:\Users\malyi1\Developer\skola-iur\IUR_p07-user_control\MyCustomControl\obj\Debug\MyCustomControl.dll
+c:\Users\malyi1\Developer\skola-iur\IUR_p07-user_control\MyCustomControl\obj\Debug\MyCustomControl.pdb
+c:\Users\malyi1\Developer\skola-iur\IUR_p07-user_control\MyCustomControl\obj\Debug\MyCustomControl.csprojAssemblyReference.cache
