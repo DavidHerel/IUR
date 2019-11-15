@@ -1,0 +1,99 @@
+﻿<Window x:Class="HW05.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW05"
+        mc:Ignorable="d"
+        Title="E5" Height="300" Width="500">
+    <Window.Resources>
+        <Style TargetType="Ellipse">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=yellowButton, Path=IsChecked}"
+Value="True">
+                    <DataTrigger.EnterActions >
+                        <BeginStoryboard x:Name="Yellow">
+                            <Storyboard>
+                                <ThicknessAnimation To="189,85,0,0" Duration="0:0:1"
+Storyboard.TargetProperty="Margin"/>
+                                <ColorAnimation To="Yellow"
+                                                Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)"
+                                                Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+                    <DataTrigger.ExitActions>
+                        <RemoveStoryboard BeginStoryboardName="Yellow"/>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" />
+                                <ColorAnimation
+                                                Storyboard.TargetProperty="Fill.Color"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.ExitActions>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=redButton, Path=IsChecked}"
+Value="True">
+                    <DataTrigger.EnterActions >
+                        <BeginStoryboard x:Name="Red">
+                            <Storyboard>
+                                <ThicknessAnimation To="189,15,0,0" Duration="0:0:1"
+Storyboard.TargetProperty="Margin"/>
+                                <ColorAnimation To="Red"
+                                                Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)"
+                                                Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+                    <DataTrigger.ExitActions>
+                        <RemoveStoryboard BeginStoryboardName="Red"/>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" />
+                                <ColorAnimation
+                                                Storyboard.TargetProperty="Fill.Color"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.ExitActions>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=greenButton, Path=IsChecked}"
+Value="True">
+                    
+                    <DataTrigger.EnterActions >
+                        <BeginStoryboard x:Name="Green">
+                            <Storyboard>
+                                <ThicknessAnimation To="189,155,0,0" Duration="0:0:1"
+Storyboard.TargetProperty="Margin"/>
+                                <ColorAnimation To="Green"
+                                                Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)"
+                                                Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+                    <DataTrigger.ExitActions>
+                        <RemoveStoryboard BeginStoryboardName="Green"/>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <ThicknessAnimation Storyboard.TargetProperty="Margin" />
+                                <ColorAnimation
+                                                Storyboard.TargetProperty="Fill.Color"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.ExitActions>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <RadioButton Name="redButton" Content="red" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="yellowButton" Content="yellow" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top"/>
+        <RadioButton Name="greenButton" Content="green" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top"/>
+        <Ellipse HorizontalAlignment="Left" Height="64" Margin="189,15,0,0" VerticalAlignment="Top" Width="68">
+            <Ellipse.Fill>
+                <SolidColorBrush Color="Gray"/>
+            </Ellipse.Fill>
+        </Ellipse>
+
+    </Grid>
+</Window>
