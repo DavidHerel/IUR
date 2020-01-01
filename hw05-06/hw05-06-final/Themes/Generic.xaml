@@ -9,7 +9,6 @@
     <Style TargetType="{x:Type local:WeatherCustomControl}" BasedOn="{StaticResource {x:Type ToggleButton}}">
         <Setter Property="Background" Value="LightSalmon" />
         <!--<Setter Property="Foreground" Value="Blue"/>-->
-        <Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=City}"/>
         <Setter Property="Margin" Value="4"/>
 
         <Setter Property="Template">
