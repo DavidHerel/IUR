@@ -83,12 +83,12 @@
             </Grid>
 
             <Grid Margin="106,2.6,-0.2,-0.2" Grid.Row="1" Visibility="{Binding ElementName=toggleMe2, Path=IsChecked, Converter={StaticResource boolConverter}}">
-                <Label Content="asdsada asda" HorizontalAlignment="Left" FontSize="25" FontWeight="Bold" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                <Button Content="Další outfit" FontSize="25" FontWeight="Bold" HorizontalAlignment="Left" Margin="105,331,0,0" VerticalAlignment="Top" Width="187" Foreground="Pink" Height="46"/>
+                <Label Name="pocetObleceni" Content="{Binding PocetObleceni}" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Button Command="{Binding NoveObleceniButton}" Content="Přidat další" FontSize="25" FontWeight="Bold" HorizontalAlignment="Left" Margin="105,331,0,0" VerticalAlignment="Top" Width="187" Foreground="Pink" Height="46"/>
                 <ListBox ItemsSource="{Binding ObleceniCards}" Margin="10,58,10,97" >
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <WrapPanel MaxWidth="800" />
+                            <WrapPanel MaxWidth="400" />
                         </ItemsPanelTemplate>
                     </ListBox.ItemsPanel>
                     <ListBox.ItemTemplate>
@@ -97,8 +97,10 @@
                                 <local:ObleceniCustomControl DruhObleceni="{Binding Druh, Mode=TwoWay}"
                                                     Barva="{Binding Barva, Mode=TwoWay}"
                                                     Kategorie="{Binding Kategorie, Mode=TwoWay}"
+                                                    Icon="{Binding Icon, Mode=TwoWay}"
                                                     RemoveCommand="{Binding DeleteCity}"
-                                                    Width="200" />
+                                                    Width="80" >
+                                </local:ObleceniCustomControl>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

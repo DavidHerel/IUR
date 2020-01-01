@@ -82,12 +82,11 @@ namespace Satnik
         public static readonly DependencyProperty KategorieProperty =
       DependencyProperty.Register("Kategorie", typeof(string), typeof(ObleceniCustomControl));
 
-
-        public string Icon
+        public BitmapImage Icon
         {
             get
             {
-                return (string)GetValue(IconProperty);
+                return (BitmapImage)GetValue(IconProperty);
             }
             set
             {
@@ -96,7 +95,7 @@ namespace Satnik
         }
 
         public static readonly DependencyProperty IconProperty =
-    DependencyProperty.Register("Icon", typeof(string), typeof(ObleceniCustomControl));
+    DependencyProperty.Register("Icon", typeof(BitmapImage), typeof(ObleceniCustomControl));
 
 
     }
@@ -119,4 +118,5 @@ namespace Satnik
             throw new NotImplementedException();
         }
     }
+
 }

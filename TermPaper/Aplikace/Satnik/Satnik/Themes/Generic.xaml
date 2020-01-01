@@ -18,20 +18,11 @@
                             BorderThickness="{TemplateBinding BorderThickness}">
                         <StackPanel>
                             <StackPanel Visibility="{TemplateBinding IsChecked, Converter={StaticResource boolToVisibiltyConverter}, ConverterParameter=True}">
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{TemplateBinding DruhObleceni}" FontSize="20" ></TextBlock>
-                                        <TextBlock Text="      "></TextBlock>
-                                    </StackPanel>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Label Content="{TemplateBinding Barva}"></Label>
-                                    </StackPanel>
-                                </StackPanel>
+                                <Image Source="{Binding Icon, RelativeSource={RelativeSource TemplatedParent}}" Width="60" Height="60" />
                             </StackPanel>
                             <StackPanel Visibility="{TemplateBinding IsChecked, Converter={StaticResource boolToVisibiltyConverter}, ConverterParameter=False}">
-                                <TextBlock Text="DruhObleceni" FontSize="20"></TextBlock>
-                                <TextBox Text="{Binding DruhObleceni, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"></TextBox>
-                                <Button Command="{TemplateBinding RemoveCommand}">Remove</Button>
+                                <Image Source="{Binding Icon, RelativeSource={RelativeSource TemplatedParent}}" Width="30" Height="30" />
+                                <Button Command="{TemplateBinding RemoveCommand}">Smazat</Button>
                             </StackPanel>
 
                         </StackPanel>
@@ -42,10 +33,10 @@
 
         <Style.Triggers>
             <Trigger Property="IsChecked" Value="True">
-                <Setter Property="Background" Value="Yellow"></Setter>
+                <Setter Property="Background" Value="WhiteSmoke"></Setter>
             </Trigger>
             <Trigger Property="IsChecked" Value="False">
-                <Setter Property="Background" Value="Orange"></Setter>
+                <Setter Property="Background" Value="White"></Setter>
             </Trigger>
         </Style.Triggers>
     </Style>

@@ -8,10 +8,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/cold2.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/cold3.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/hot1.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/hot2.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/hot3.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2018.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2019.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2020.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2021.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2022.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2023.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2024.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2025.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2026.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2027.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2028.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2029.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2030.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2031.png")]
 
 
