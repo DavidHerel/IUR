@@ -22,6 +22,13 @@ namespace Satnik
     {
 
         public BitmapImage bitmapImage;
+
+        public string druhObleceni;
+
+        public string barvaObleceni;
+
+        public string kategorieObleceni;
+
         public NoveObleceni()
         {
             InitializeComponent();
@@ -49,6 +56,66 @@ namespace Satnik
                 ObleceniImage.Source = new BitmapImage(new Uri(op.FileName));
                 bitmapImage = new BitmapImage(new Uri(op.FileName));
             }
+        }
+
+        private void Tricko_Checked(object sender, RoutedEventArgs e)
+        {
+            druhObleceni = "Tricko";
+        }
+
+        private void Kosile_Checked(object sender, RoutedEventArgs e)
+        {
+            druhObleceni = "Kosile";
+        }
+
+        private void Mikina_Checked(object sender, RoutedEventArgs e)
+        {
+            druhObleceni = "Mikina";
+        }
+
+        private void Svetr_Checked(object sender, RoutedEventArgs e)
+        {
+            druhObleceni = "Svetr";
+        }
+
+        private void Sako_Checked(object sender, RoutedEventArgs e)
+        {
+            druhObleceni = "Sako";
+        }
+
+        private void Kabat_Checked(object sender, RoutedEventArgs e)
+        {
+            druhObleceni = "Kabat";
+        }
+
+        private void Bunda_Checked(object sender, RoutedEventArgs e)
+        {
+            druhObleceni = "Bunda";
+        }
+
+        private void Kalhoty_Checked(object sender, RoutedEventArgs e)
+        {
+            druhObleceni = "Kalhoty";
+        }
+
+        private void Kratasy_Checked(object sender, RoutedEventArgs e)
+        {
+            druhObleceni = "Kratasy";
+        }
+
+        private void Sukne_Checked(object sender, RoutedEventArgs e)
+        {
+            druhObleceni = "Sukne";
+        }
+
+        private void Boty_Checked(object sender, RoutedEventArgs e)
+        {
+            druhObleceni = "Boty";
+        }
+
+        private void Doplnky_Checked(object sender, RoutedEventArgs e)
+        {
+            druhObleceni = "Doplnky";
         }
     }
 }

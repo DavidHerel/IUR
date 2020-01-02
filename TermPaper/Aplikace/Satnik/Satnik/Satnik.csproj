@@ -136,5 +136,27 @@
     <Resource Include="Images\Ellipse 30.png" />
     <Resource Include="Images\Ellipse 31.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Group 109.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\casual-t-shirt-.png" />
+    <Resource Include="Images\ic_home_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\boty.png" />
+    <Resource Include="Images\kalhoty.png" />
+    <Resource Include="Images\kalhoty2.png" />
+    <Resource Include="Images\kalhoty3.png" />
+    <Resource Include="Images\kalhoty4.png" />
+    <Resource Include="Images\kosile.png" />
+    <Resource Include="Images\sako.png" />
+    <Resource Include="Images\sako2.png" />
+    <Resource Include="Images\sako3.png" />
+    <Resource Include="Images\sako4.png" />
+    <Resource Include="Images\tricko2.png" />
+    <Resource Include="Images\tricko3.png" />
+    <Resource Include="Images\tricko4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

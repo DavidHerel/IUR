@@ -11,13 +11,13 @@
             <RowDefinition Height="22*"/>
             <RowDefinition Height="51*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="OkButton" Content="Ok" HorizontalAlignment="Left" Margin="89,432.8,0,0" VerticalAlignment="Top" Width="75" Click="OkButton_Click" Grid.Row="1" Height="19"/>
-        <Button x:Name="StornoButton" Content="Storno" HorizontalAlignment="Left" Margin="222,432.8,0,0" VerticalAlignment="Top" Width="75" Click="StornoButton_Click" Grid.Row="1" Height="19"/>
+        <Button x:Name="OkButton" Content="Ok" HorizontalAlignment="Left" Margin="89,406.8,0,0" VerticalAlignment="Top" Width="105" Click="OkButton_Click" Grid.Row="1" Height="40"/>
+        <Button x:Name="StornoButton" Content="Storno" HorizontalAlignment="Left" Margin="222,406.8,0,0" VerticalAlignment="Top" Width="104" Click="StornoButton_Click" Grid.Row="1" Height="40"/>
         <Border BorderThickness="1" BorderBrush="#FF000000" Margin="89,10,73.2,402.8" Grid.RowSpan="2">
             <Image x:Name="ObleceniImage" HorizontalAlignment="Left" Height="232" Margin="5.2,5.2,0,0" VerticalAlignment="Top" Width="237"/>
         </Border>
-        <Button x:Name="ObleceniButton" Content="Přidat obrázek" HorizontalAlignment="Left" Margin="155,68.8,0,0" VerticalAlignment="Top" Width="93" Click="ObleceniButton_Click" Grid.Row="1" Height="19"/>
-        <StackPanel Grid.Row="1" Margin="-7,239.8,8.2,42.8" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="ObleceniButton" Content="Přidat obrázek" HorizontalAlignment="Left" Margin="156,63.8,0,0" VerticalAlignment="Top" Width="119" Click="ObleceniButton_Click" Grid.Row="1" Height="32"/>
+        <StackPanel Grid.Row="1" Margin="-72,228.8,73.2,53.8" RenderTransformOrigin="0.5,0.5">
             <StackPanel.Resources>
                 <Style x:Key="Flag" TargetType="RadioButton">
                     <Style.Triggers>
@@ -50,8 +50,8 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </StackPanel.RenderTransform>
-            <Grid Height="73" Width="500" Margin="0,0,-89.6, 0">
-                <RadioButton Width="30" Height="30"  Content="../Images/Ellipse 18.png"  Style="{StaticResource Flag}" Margin="94,5,376,38" />
+            <Grid Height="73" Width="500" Margin="2,0,-88.4,0">
+                <RadioButton IsChecked="True" Width="30" Height="30"  Content="../Images/Ellipse 18.png"  Style="{StaticResource Flag}" Margin="94,5,376,38" />
                 <RadioButton Width="30" Height="30" Margin="91,5,289,38" Content="../Images/Ellipse 19.png"  Style="{StaticResource Flag}"/>
                 <RadioButton Width="30" Height="30" Margin="177,5,293,38" Content="../Images/Ellipse 20.png"  Style="{StaticResource Flag}"/>
                 <RadioButton Width="30" Height="30" Margin="218,5,252,38" Content="../Images/Ellipse 21.png"  Style="{StaticResource Flag}"/>
@@ -69,8 +69,31 @@
 
             </Grid>
         </StackPanel>
-        <Label Content="Barva oblečení:" FontWeight="Bold" HorizontalAlignment="Left" Margin="89,204.8,0,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Label Content="Druh oblečení:" FontWeight="Bold" HorizontalAlignment="Left" Margin="89,106.8,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Barva oblečení:" FontWeight="Bold" HorizontalAlignment="Left" Margin="19,201.8,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="Druh oblečení:" FontWeight="Bold" HorizontalAlignment="Left" Margin="19,101.8,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Grid Margin="10,132.8,-9.8,264.8" Grid.Row="1">
+            <RadioButton x:Name="Tricko" IsChecked="True" Content="Tričko" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Checked="Tricko_Checked"/>
+            <RadioButton x:Name="Kosile" Content="Košile" HorizontalAlignment="Left" Margin="73,10,0,0" VerticalAlignment="Top" Checked="Kosile_Checked"/>
+            <RadioButton x:Name="Mikina" Content="Mikina" HorizontalAlignment="Left" Margin="138,10,0,0" VerticalAlignment="Top" Checked="Mikina_Checked"/>
+            <RadioButton x:Name="Svetr" Content="Svetr" HorizontalAlignment="Left" Margin="203,10,0,0" VerticalAlignment="Top" Checked="Svetr_Checked"/>
+            <RadioButton x:Name="Sako" Content="Sako" HorizontalAlignment="Left" Margin="260,10,0,0" VerticalAlignment="Top" Checked="Sako_Checked"/>
+            <RadioButton x:Name="Kabat" Content="Kabát" HorizontalAlignment="Left" Margin="316,10,0,0" VerticalAlignment="Top" Checked="Kabat_Checked"/>
+            <RadioButton x:Name="Bunda" Content="Bunda" HorizontalAlignment="Left" Margin="10,33,0,0" VerticalAlignment="Top" Checked="Bunda_Checked"/>
+            <RadioButton x:Name="Kalhoty" Content="Kalhoty" HorizontalAlignment="Left" Margin="73,33,0,0" VerticalAlignment="Top" Checked="Kalhoty_Checked"/>
+            <RadioButton x:Name="Kratasy" Content="Kraťasy" HorizontalAlignment="Left" Margin="138,33,0,0" VerticalAlignment="Top" Checked="Kratasy_Checked"/>
+            <RadioButton x:Name="Sukne" Content="Sukně" HorizontalAlignment="Left" Margin="203,33,0,0" VerticalAlignment="Top" Checked="Sukne_Checked"/>
+            <RadioButton x:Name="Boty" Content="Boty" HorizontalAlignment="Left" Margin="260,33,0,0" VerticalAlignment="Top" Checked="Boty_Checked"/>
+            <RadioButton x:Name="Doplnky" Content="Doplňky" HorizontalAlignment="Left" Margin="316,33,0,0" VerticalAlignment="Top" Checked="Doplnky_Checked"/>
+
+        </Grid>
+
+        <Label Content="Kategorie oblečení:" FontWeight="Bold" HorizontalAlignment="Left" Margin="19,318.8,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Grid Margin="0,344.8,-9.8,44.8" Grid.Row="1">
+            <RadioButton IsChecked="True" Content="Neformální" HorizontalAlignment="Left" Margin="25,10,0,0" VerticalAlignment="Top"/>
+            <RadioButton Content="Formální" HorizontalAlignment="Left" Margin="123,10,0,0" VerticalAlignment="Top"/>
+
+        </Grid>
+
 
 
 

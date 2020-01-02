@@ -52,34 +52,19 @@
                     </Style>
                 </StackPanel.Resources>
                 <ItemsControl Margin="0,0,0.8,0" Height="395">
-                    <RadioButton Content="../Images/cold1.png" x:Name="toggleMe"  Style="{StaticResource Flag}" Height="69"/>
-                    <RadioButton Content="../Images/cold2.png" x:Name="toggleMe2" IsChecked="True" Style="{StaticResource Flag}" Height="69"/>
+                    <RadioButton Content="../Images/ic_home_24px.png" x:Name="toggleMe"  IsChecked="True" Style="{StaticResource Flag}" Height="69"/>
+                    <RadioButton Content="../Images/casual-t-shirt-.png" x:Name="toggleMe2" Style="{StaticResource Flag}" Height="69"/>
 
                 </ItemsControl>
             </StackPanel>
             <Grid Margin="106,2.6,-0.2,-0.2" Grid.Row="1" Visibility="{Binding ElementName=toggleMe, Path=IsChecked, Converter={StaticResource boolConverter}}">
-                <Image HorizontalAlignment="Left" Height="120" Margin="38,58,0,0" VerticalAlignment="Top" Width="135">
-                    <Image.Source>
-                        <BitmapImage DecodePixelWidth="300" UriSource="/Images/cold1.png" />
-                    </Image.Source>
-                </Image>
-                <Image HorizontalAlignment="Left" Height="120" Margin="213,58,0,0" VerticalAlignment="Top" Width="135">
-                    <Image.Source>
-                        <BitmapImage DecodePixelWidth="300" UriSource="/Images/cold1.png" />
-                    </Image.Source>
-                </Image>
-                <Image HorizontalAlignment="Left" Height="120" Margin="213,183,0,0" VerticalAlignment="Top" Width="135">
-                    <Image.Source>
-                        <BitmapImage DecodePixelWidth="300" UriSource="/Images/cold1.png" />
-                    </Image.Source>
-                </Image>
-                <Image HorizontalAlignment="Left" Height="120" Margin="38,183,0,0" VerticalAlignment="Top" Width="135">
-                    <Image.Source>
-                        <BitmapImage DecodePixelWidth="300" UriSource="/Images/cold1.png" />
-                    </Image.Source>
-                </Image>
+
                 <Label Content="Dnešní outfit" HorizontalAlignment="Left" FontSize="25" FontWeight="Bold" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                <Button Content="Další outfit" FontSize="25" FontWeight="Bold" HorizontalAlignment="Left" Margin="105,331,0,0" VerticalAlignment="Top" Width="187" Foreground="Pink" Height="46"/>
+                <Button Content="Další outfit" Command="{Binding DalsiOutfitButton}" FontSize="25" FontWeight="Bold" HorizontalAlignment="Left" Margin="105,331,0,0" VerticalAlignment="Top" Width="187" Foreground="Pink" Height="46"/>
+                <Image Source="{Binding sakoVM}" HorizontalAlignment="Left" Height="119" Margin="58,70,0,0" VerticalAlignment="Top" Width="115"/>
+                <Image Source="{Binding kalhotyVM}" HorizontalAlignment="Left" Height="119" Margin="197,70,0,0" VerticalAlignment="Top" Width="115"/>
+                <Image Source="{Binding trickoVM}" HorizontalAlignment="Left" Height="119" Margin="58,204,0,0" VerticalAlignment="Top" Width="115"/>
+                <Image Source="{Binding botyVM}" HorizontalAlignment="Left" Height="119" Margin="197,204,0,0" VerticalAlignment="Top" Width="115"/>
             </Grid>
 
             <Grid Margin="106,2.6,-0.2,-0.2" Grid.Row="1" Visibility="{Binding ElementName=toggleMe2, Path=IsChecked, Converter={StaticResource boolConverter}}">

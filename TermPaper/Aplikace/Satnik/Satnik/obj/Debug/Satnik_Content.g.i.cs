@@ -8,19 +8,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2018.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2019.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2020.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2021.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2022.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2023.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2024.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2025.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2026.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2027.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2028.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2029.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2030.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/ellipse%2031.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/boty.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/kalhoty.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/kalhoty2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/kalhoty3.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/kalhoty4.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/kosile.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sako.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sako2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sako3.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sako4.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/tricko2.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/tricko3.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/tricko4.png")]
 
 
