@@ -100,7 +100,10 @@ namespace Satnik.ViewModels
             //zasafluhuju tricka
             saka.Shuffle();
             //vezmu random
-            sakoVM = saka.First().Icon;
+            if (saka.Count > 0)
+            {
+                sakoVM = saka.First().Icon;
+            }
 
             //trika
             IList<ObleceniCustomCardViewModel> tricka = new List<ObleceniCustomCardViewModel>();
@@ -116,7 +119,10 @@ namespace Satnik.ViewModels
             //zasafluhuju tricka
             tricka.Shuffle();
             //vezmu random
-            trickoVM = tricka.First().Icon;
+            if (tricka.Count > 0)
+            {
+                trickoVM = tricka.First().Icon;
+            }
 
             //kalhoty
             IList<ObleceniCustomCardViewModel> kalhoty = new List<ObleceniCustomCardViewModel>();
@@ -132,7 +138,10 @@ namespace Satnik.ViewModels
             //zasafluhuju tricka
             kalhoty.Shuffle();
             //vezmu random
-            kalhotyVM = kalhoty.First().Icon;
+            if (kalhoty.Count > 0)
+            {
+                kalhotyVM = kalhoty.First().Icon;
+            }
 
             //kalhoty
             IList<ObleceniCustomCardViewModel> boty = new List<ObleceniCustomCardViewModel>();
@@ -147,8 +156,11 @@ namespace Satnik.ViewModels
 
             //zasafluhuju tricka
             boty.Shuffle();
-            //vezmu random
-            botyVM = boty.First().Icon;
+            if (boty.Count > 0)
+            {
+                //vezmu random
+                botyVM = boty.First().Icon;
+            }
         }
 
 
@@ -163,13 +175,25 @@ namespace Satnik.ViewModels
 
             logo = new BitmapImage();
             logo.BeginInit();
+            logo.UriSource = new Uri(@"/Satnik;component/Images/sandale.png", UriKind.Relative);
+            logo.EndInit();
+            ObleceniCards.Add(new ObleceniCustomCardViewModel(this, "Boty", "cerna", "formalni", logo));
+
+            logo = new BitmapImage();
+            logo.BeginInit();
+            logo.UriSource = new Uri(@"/Satnik;component/Images/boty3.png", UriKind.Relative);
+            logo.EndInit();
+            ObleceniCards.Add(new ObleceniCustomCardViewModel(this, "Boty", "cerna", "formalni", logo));
+
+            logo = new BitmapImage();
+            logo.BeginInit();
             logo.UriSource = new Uri(@"/Satnik;component/Images/tricko2.png", UriKind.Relative);
             logo.EndInit();
             ObleceniCards.Add(new ObleceniCustomCardViewModel(this, "Tricko", "zelena", "formalni", logo));
 
             logo = new BitmapImage();
             logo.BeginInit();
-            logo.UriSource = new Uri(@"/Satnik;component/Images/tricko3.png", UriKind.Relative);
+            logo.UriSource = new Uri(@"/Satnik;component/Images/tricko4.jpg", UriKind.Relative);
             logo.EndInit();
             ObleceniCards.Add(new ObleceniCustomCardViewModel(this, "Tricko", "zelena", "formalni", logo));
 
@@ -187,7 +211,13 @@ namespace Satnik.ViewModels
 
             logo = new BitmapImage();
             logo.BeginInit();
-            logo.UriSource = new Uri(@"/Satnik;component/Images/sako2.png", UriKind.Relative);
+            logo.UriSource = new Uri(@"/Satnik;component/Images/mikina.png", UriKind.Relative);
+            logo.EndInit();
+            ObleceniCards.Add(new ObleceniCustomCardViewModel(this, "Sako", "zelena", "formalni", logo));
+
+            logo = new BitmapImage();
+            logo.BeginInit();
+            logo.UriSource = new Uri(@"/Satnik;component/Images/bunda.jpg", UriKind.Relative);
             logo.EndInit();
             ObleceniCards.Add(new ObleceniCustomCardViewModel(this, "Sako", "zelena", "formalni", logo));
 
@@ -205,7 +235,13 @@ namespace Satnik.ViewModels
 
             logo = new BitmapImage();
             logo.BeginInit();
-            logo.UriSource = new Uri(@"/Satnik;component/Images/kalhoty3.png", UriKind.Relative);
+            logo.UriSource = new Uri(@"/Satnik;component/Images/kratasy.jpg", UriKind.Relative);
+            logo.EndInit();
+            ObleceniCards.Add(new ObleceniCustomCardViewModel(this, "Kalhoty", "zelena", "formalni", logo));
+
+            logo = new BitmapImage();
+            logo.BeginInit();
+            logo.UriSource = new Uri(@"/Satnik;component/Images/kratasy2.jpg", UriKind.Relative);
             logo.EndInit();
             ObleceniCards.Add(new ObleceniCustomCardViewModel(this, "Kalhoty", "zelena", "formalni", logo));
         }

@@ -8,18 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/boty.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/kalhoty.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/kalhoty2.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/kalhoty3.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/kalhoty4.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/kosile.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sako.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sako2.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sako3.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sako4.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/tricko2.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/tricko3.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/tricko4.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/bunda.jpg")]
 
 
