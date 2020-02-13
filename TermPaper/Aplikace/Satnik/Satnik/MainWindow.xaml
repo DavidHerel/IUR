@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Satnik"
         xmlns:local1="clr-namespace:Satnik.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="498.731" Width="499.324">
+        Title="MainWindow" Height="498.731" Width="499.324" ResizeMode="NoResize">
     <Window.Resources>
         <local1:MainViewModel x:Key="ViewModel"/>
     </Window.Resources>
@@ -52,8 +52,8 @@
                     </Style>
                 </StackPanel.Resources>
                 <ItemsControl Margin="0,0,0.8,0" Height="395">
-                    <RadioButton Content="../Images/ic_home_24px.png" x:Name="toggleMe"  IsChecked="True" Style="{StaticResource Flag}" Height="69"/>
-                    <RadioButton Content="../Images/casual-t-shirt-.png" x:Name="toggleMe2" Style="{StaticResource Flag}" Height="69"/>
+                    <RadioButton Content="../Images/ic_home_24px.png" x:Name="toggleMe" Style="{StaticResource Flag}" Height="69"/>
+                    <RadioButton Content="../Images/casual-t-shirt-.png" x:Name="toggleMe2" IsChecked="True" Style="{StaticResource Flag}" Height="69"/>
 
                 </ItemsControl>
             </StackPanel>

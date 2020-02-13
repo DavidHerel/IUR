@@ -40,7 +40,6 @@ namespace Satnik.ViewModels
             //pridani zakladniho druhu obleceni
             addStartingClothes();
 
-
             PocetObleceni = "Ve vaší skříni je " + ObleceniCards.Count + " kusů oblečení";
 
         }
